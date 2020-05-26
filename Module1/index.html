@@ -17,7 +17,7 @@
 		<br>
 		<h2>Note: Some of the videos featured may be different.</h2>
 		<form id="myform" action="index.php">
-			<div>
+			<div class="question">
 				<h3> What do you like about this UI?</h3>
 				<p>Type Answer Here:<input type="text" name="WordAnswer"</p>
 				<br>
@@ -39,8 +39,29 @@
 				<br>
 				<h3>Do you have any other comments about the display of this UI? Please type below:</h3>
 				<textarea rows="5" cols="90"></textarea>
+				<br>
+				<br>
+				<h3>I would showcase this UI layout to a friend.</h3>
+				<table style="width:90%">
+					<tr>
+						<th>Strongly Agree</th>
+						<th>Agree</th>
+						<th>Neutral</th>
+						<th>Disagree</th>
+						<th>Strongly Disagree</th>
+					</tr>
+					<tr>
+						<td><input type="radio" value="Strongly Agree" name="Recommend"/></td>
+            					<td><input type="radio" value="Agree" name="Recommend"/></td>
+            					<td><input type="radio" value="Neutral" name="Recommend"/></td>
+            					<td><input type="radio" value="Disagree" name="Recommend"/></td>
+            					<td><input type="radio" value="Strongly Disagree" name="Recommend"/></td>
+					</tr>
+				</table>
 			</div>
 		</form>
+		<button class="button">Submit Survey</button>
+		<p id="signature">Website created by Yutaro Miyata</p>
 	</body>
 </html>
 	

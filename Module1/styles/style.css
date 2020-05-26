@@ -26,3 +26,28 @@ img{
 	margin-bottom: 30px;
 	align: center;
 }
+
+th{
+	text-align: left;
+}
+
+.question{
+	background: rgba(0,75,255,0.4);
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px;
+}
+
+.button{
+	width: 50%;
+	font-size: 20px;
+	padding: 20px;
+	margin-top: 50px;
+	margin-left: 230px;
+}
+
+#signature{
+	text-align: right;
+	font-size: 20px;
+}
