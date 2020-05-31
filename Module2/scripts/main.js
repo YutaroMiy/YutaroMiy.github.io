@@ -32,9 +32,16 @@ function populateListProductChoices(slct1, slct2) {
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+	
+    let selectedOptions = [];
+    for (j = 0; j <s1.options.length; j++){
+    	if (s1.options[j].selected){
+    		selectedOptions.push(s1.options[j].value);
+    	}
+    }
+    
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictListProducts(products, selectedOptions);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
