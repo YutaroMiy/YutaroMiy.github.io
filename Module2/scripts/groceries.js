@@ -1,3 +1,11 @@
+/*  
+    Name: Yutaro Miyata
+    Student Number: 8912340
+  
+    This JS file contains all the functionality for the different grocery items.
+
+*/
+
 // Array of products, each product is an object with different fieldset
 // A set of ingredients should be added to products		 
 
@@ -83,7 +91,7 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 
 function restrictListProducts(prods, restrictions) {
-	console.log("restriction",restrictions);
+	
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 		let selected = true;
@@ -101,8 +109,9 @@ function restrictListProducts(prods, restrictions) {
 			selected = false;	
 		}
 
+		// add each selected item to the array
 		if(selected){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
 	}
 	return product_names;
@@ -116,5 +125,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return totalPrice;
+	return totalPrice.toFixed(2);
 }

@@ -1,5 +1,11 @@
-// This function is called when any of the tab is clicked
-// It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+/*  
+    Name: Yutaro Miyata
+    Student Number: 8912340
+  
+    This JS file contians all the functionality when any tab is clicked.
+
+    It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+*/
 
 function openInfo(evt, tabName) {
 
@@ -33,6 +39,7 @@ function populateListProductChoices(slct1, slct2) {
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 	
+	// put into an array all the options which are selected
     let selectedOptions = [];
     for (j = 0; j <s1.options.length; j++){
     	if (s1.options[j].selected){
@@ -43,13 +50,16 @@ function populateListProductChoices(slct1, slct2) {
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, selectedOptions);
 
+    // sort the array by price in increasing order
+    var sortedArray = optionArray.sort(function(a,b){return a.price - b.price})
+
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
 		
-	for (i = 0; i < optionArray.length; i++) {
+	for (i = 0; i < sortedArray.length; i++) {
 			
-		var productName = optionArray[i];
+		var productName = sortedArray[i].name;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -57,10 +67,13 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.value = productName;
 		s2.appendChild(checkbox);
 		
+		//Create a price variable which is then concatenated to the string which is displayed
+		var price = sortedArray[i].price;
+
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.appendChild(document.createTextNode(productName + " " + price));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM

@@ -1,21 +1,31 @@
-/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+/*  
+    Name: Yutaro Miyata
+    Student Number: 8912340
+  
+    This CSS file contains all the display characteristics.
+
+    This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>  
+*/
+
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
   background-color: #f1f1f1;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
-  border: none;
+  border: 1px solid black;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  
 }
 
 /* Change background color of buttons on hover */
@@ -30,18 +40,21 @@
 
 /* Style the tab content */
 .tabcontent {
+  background: rgba(238,130,238,0.4);
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-top: none;
 }
 
+/* Style the header */
 h1 {
   font-size: 60px;
   text-align: center;
   font-family: Arial;
 }
 
+/* Style the body   */
 body {
   background: rgba(160,255,233,0.4);
   width: 900px;
@@ -49,4 +62,10 @@ body {
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
   
+}
+
+/* Style the signature  */
+#signature{
+  text-align: right;
+  font-size: 20px;
 }
