@@ -16,7 +16,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 1.99,
-		source: "images/broccoli.JPG"
+		source: "images/broccoli.JPG",
+		category: "Vegetables"
 	},
 	{
 		name: "bread",
@@ -24,7 +25,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 2.35,
-		source: "images/bread.JPG"
+		source: "images/bread.JPG",
+		category: "Grains"
 	},
 	{
 		name: "salmon",
@@ -32,7 +34,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 10.00,
-		source: "images/salmon.JPG"
+		source: "images/salmon.JPG",
+		category: "Protein"
 	},
 	{
 		name: "potato",
@@ -40,7 +43,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 1.49,
-		source: "images/potato.JPG"
+		source: "images/potato.JPG",
+		category: "Vegetables"
 	},
 	{
 		name: "chicken",
@@ -48,7 +52,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 7.49,
-		source: "images/chicken.JPG" 
+		source: "images/chicken.JPG",
+		category: "Protein" 
 	},
 	{
 		name: "apple",
@@ -56,7 +61,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 0.99,
-		source: "images/apple.JPG"
+		source: "images/apple.JPG",
+		category: "Fruits"
 	},
 	{
 		name: "vanilla ice cream",
@@ -64,7 +70,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 3.99,
-		source: "images/vanillaicecream.JPG"
+		source: "images/vanillaicecream.JPG",
+		category: "Dairy"
 	},
 	{
 		name: "pasta noodles",
@@ -72,7 +79,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 2.99,
-		source: "images/pastanoodles.JPG"
+		source: "images/pastanoodles.JPG",
+		category: "Grains"
 	},
 	{
 		name: "beef",
@@ -80,7 +88,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 6.99,
-		source: "images/beef.JPG"
+		source: "images/beef.JPG",
+		category: "Protein"
 	},
 	{
 		name: "onions",
@@ -88,7 +97,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price: 0.99,
-		source: "images/onions.JPG"
+		source: "images/onions.JPG",
+		category: "Vegetables"
 	}
 
 

@@ -27,6 +27,26 @@ function openInfo(evt, tabName) {
 
 }
 
+function getProductsForCategory(evt, tabName) {
+
+	// Get all elements with class="tabcontent" and hide them
+	tabcontent = document.getElementsByClassName("producttabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	// Get all elements with class="tablinks" and remove the class "active"
+	tablinks = document.getElementsByClassName("producttablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += " active";
+
+}
+
 
 	
 // generate a checkbox list from a list of products
@@ -35,11 +55,20 @@ function openInfo(evt, tabName) {
 function populateListProductChoices(slct1, slct2) {
 
     var s1 = document.getElementById(slct1);
-    var s2 = document.getElementById(slct2);
+    //var s2 = document.getElementById(slct2);
+    var veggies = document.getElementById("Vegetables");
+    var fruits = document.getElementById("Fruits");
+    var protein = document.getElementById("Protein");
+    var grains = document.getElementById("Grains");
+    var dairy = document.getElementById("Dairy");
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
-    s2.innerHTML = "";
-	
+    veggies.innerHTML = "";
+    fruits.innerHTML = "";
+	protein.innerHTML = "";
+	grains.innerHTML = "";
+	dairy.innerHTML = "";
+
 	// put into an array all the options which are selected
     var selected = [];
     var checkboxes = document.getElementsByName("dietSelect");
@@ -62,6 +91,10 @@ function populateListProductChoices(slct1, slct2) {
 	// <label for="Bread">Bread/label><br>
 		
 	for (i = 0; i < sortedArray.length; i++) {
+		
+		var productCategory = sortedArray[i].category;
+
+		var s2 = document.getElementById(productCategory);
 			
 		var productName = sortedArray[i].name;
 		// create the checkbox and add in HTML DOM

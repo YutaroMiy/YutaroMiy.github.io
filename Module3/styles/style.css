@@ -47,6 +47,9 @@
   border-top: none;
 }
 
+.producttabcontent{
+  display: none;
+}
 /* Style the header */
 h1 {
   font-size: 60px;

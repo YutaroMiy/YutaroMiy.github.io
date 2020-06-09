@@ -40,8 +40,22 @@
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
+  <div class="tab">
+  <button class="producttablinks" onclick="getProductsForCategory(event, 'Vegetables')">Vegetables</button>
+  <button class="producttablinks" onclick="getProductsForCategory(event, 'Fruits')">Fruits</button>
+  <button class="producttablinks" onclick="getProductsForCategory(event, 'Protein')">Protein</button>
+  <button class="producttablinks" onclick="getProductsForCategory(event, 'Grains')">Grains</button>
+  <button class="producttablinks" onclick="getProductsForCategory(event, 'Dairy')">Dairy</button>
+  </div>
+  <br>
 	 Choose items to buy:
-	 <div id="displayProduct"></div>
+	
+   <div id="Vegetables" class="producttabcontent"></div> 
+   <div id="Fruits" class="producttabcontent"></div> 
+   <div id="Protein" class="producttabcontent"></div> 
+   <div id="Grains" class="producttabcontent"></div> 
+   <div id="Dairy" class="producttabcontent"></div> 
+
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
