@@ -33,6 +33,7 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
+
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	
@@ -40,15 +41,18 @@ function populateListProductChoices(slct1, slct2) {
     s2.innerHTML = "";
 	
 	// put into an array all the options which are selected
-    let selectedOptions = [];
-    for (j = 0; j <s1.options.length; j++){
-    	if (s1.options[j].selected){
-    		selectedOptions.push(s1.options[j].value);
+    var selected = [];
+    var checkboxes = document.getElementsByName("dietSelect");
+    
+    for (j = 0; j < checkboxes.length; j++){
+    	if (checkboxes[j].checked){
+    		selected.push(checkboxes[j].value);
     	}
     }
     
+    
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, selectedOptions);
+    var optionArray = restrictListProducts(products, selected);
 
     // sort the array by price in increasing order
     var sortedArray = optionArray.sort(function(a,b){return a.price - b.price})
