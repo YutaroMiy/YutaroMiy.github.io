@@ -75,6 +75,14 @@ function populateListProductChoices(slct1, slct2) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName + " " + price));
 		s2.appendChild(label);
+
+		var images = sortedArray[i].source;
+
+		var view = document.createElement("img");
+		view.setAttribute("src",images);
+		view.setAttribute("width", "75");
+		view.setAttribute("height", "60");
+		s2.appendChild(view);
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    

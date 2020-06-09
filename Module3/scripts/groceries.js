@@ -15,70 +15,80 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price: 1.99
+		price: 1.99,
+		source: "images/broccoli.JPG"
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 2.35
+		price: 2.35,
+		source: "images/bread.JPG"
 	},
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 10.00
+		price: 10.00,
+		source: "images/salmon.JPG"
 	},
 	{
 		name: "potato",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price: 1.49
+		price: 1.49,
+		source: "images/potato.JPG"
 	},
 	{
 		name: "chicken",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 7.49 
+		price: 7.49,
+		source: "images/chicken.JPG" 
 	},
 	{
 		name: "apple",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price: 0.99
+		price: 0.99,
+		source: "images/apple.JPG"
 	},
 	{
 		name: "vanilla ice cream",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 3.99
+		price: 3.99,
+		source: "images/vanillaicecream.JPG"
 	},
 	{
 		name: "pasta noodles",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 2.99
+		price: 2.99,
+		source: "images/pastanoodles.JPG"
 	},
 	{
 		name: "beef",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 6.99
+		price: 6.99,
+		source: "images/beef.JPG"
 	},
 	{
 		name: "onions",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price: 0.99
+		price: 0.99,
+		source: "images/onions.JPG"
 	}
 
 
