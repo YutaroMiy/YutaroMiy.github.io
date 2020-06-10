@@ -4,7 +4,7 @@
   
     This JS file contians all the functionality when any tab is clicked.
 
-    It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+    It is adapted from https://www.w3schools.com/howto/howto_js_hover_tabs.asp
 */
 
 function openInfo(evt, tabName) {
@@ -26,6 +26,8 @@ function openInfo(evt, tabName) {
 	evt.currentTarget.className += " active";
 
 }
+
+
 
 function getProductsForCategory(evt, tabName) {
 
@@ -55,14 +57,15 @@ function getProductsForCategory(evt, tabName) {
 function populateListProductChoices(slct1, slct2) {
 
     var s1 = document.getElementById(slct1);
-    //var s2 = document.getElementById(slct2);
+    
+    //Add divs for each food group
     var veggies = document.getElementById("Vegetables");
     var fruits = document.getElementById("Fruits");
     var protein = document.getElementById("Protein");
     var grains = document.getElementById("Grains");
     var dairy = document.getElementById("Dairy");
 	
-	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
+	// Set all the divs to empty
     veggies.innerHTML = "";
     fruits.innerHTML = "";
 	protein.innerHTML = "";
@@ -95,7 +98,7 @@ function populateListProductChoices(slct1, slct2) {
 		var productCategory = sortedArray[i].category;
 
 		var s2 = document.getElementById(productCategory);
-			
+
 		var productName = sortedArray[i].name;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");

@@ -15,56 +15,62 @@
 
 <body>
 
+<div class = "wrap">
 <!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
+  <div class="tab">
+    <button class="tablinks" onmouseover="openInfo(event, 'Client')">Step 1: Specify any Dietary Restrictions/Preferences:</button>
+    <button class="tablinks" onmouseover="openInfo(event, 'Products')">Step 2: Add Products: </button>
+    <button class="tablinks" onmouseover="openInfo(event, 'Cart')">Step 3: View Cart </button>
+  </div>
+  
+  
+
+
 
 <!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Do You Have Any Dietary Restrictions/Food Preferences? </p>
-	If Yes, Please Select Any Which Apply (Select None if Not Applicable):
-  <br>
-	<!-- <input type="checkbox" id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')" multiple> -->
-	<!-- <option value=""></option> -->
-	<input type="checkbox" id="dietSelect" name="dietSelect" value="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')">Vegetarian<br>
-  <input type="checkbox" id="dietSelect" name="dietSelect" value="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')">Gluten Free<br>
-  <input type="checkbox" id="dietSelect" name="dietSelect" value="Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">Organic<br>
-  <input type="checkbox" id="dietSelect" name="dietSelect" value="None" onchange="populateListProductChoices(this.id, 'displayProduct')">None<br>
-	
-</div>
-
-<div id="Products" class="tabcontent">
-  <h3>Your Targeted Products</h3>
-  <p>We Preselected Products Based On Your Dietary Needs/Preferences. Please Select Your Foods Through the Categories Below:</p>
-  <div class="tab">
-  <button class="producttablinks" onclick="getProductsForCategory(event, 'Vegetables')">Vegetables</button>
-  <button class="producttablinks" onclick="getProductsForCategory(event, 'Fruits')">Fruits</button>
-  <button class="producttablinks" onclick="getProductsForCategory(event, 'Protein')">Protein</button>
-  <button class="producttablinks" onclick="getProductsForCategory(event, 'Grains')">Grains</button>
-  <button class="producttablinks" onclick="getProductsForCategory(event, 'Dairy')">Dairy</button>
+  <div id="Client" class="tabcontent">
+    <h3>Client Information</h3>
+    <p>Do You Have Any Dietary Restrictions/Food Preferences? </p>
+  	If Yes, Please Select Any Which Apply (Select None if Not Applicable):
+    <br>
+  	<!-- <input type="checkbox" id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')" multiple> -->
+  	<!-- <option value=""></option> -->
+  	<input type="checkbox" id="dietSelect" name="dietSelect" value="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')">Vegetarian<br>
+    <input type="checkbox" id="dietSelect" name="dietSelect" value="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')">Gluten Free<br>
+    <input type="checkbox" id="dietSelect" name="dietSelect" value="Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">Organic<br>
+    <input type="checkbox" id="dietSelect" name="dietSelect" value="None" onchange="populateListProductChoices(this.id, 'displayProduct')">None<br>
+  	
   </div>
-  <br>
-	 Select Items to Buy:
-	
-   <div id="Vegetables" class="producttabcontent"></div> 
-   <div id="Fruits" class="producttabcontent"></div> 
-   <div id="Protein" class="producttabcontent"></div> 
-   <div id="Grains" class="producttabcontent"></div> 
-   <div id="Dairy" class="producttabcontent"></div> 
 
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add Selected Items to Cart.
-	</button>
-</div>
+  <div id="Products" class="tabcontent">
+    <h3>Your Targeted Products</h3>
+    <p>We Preselected Products Based On Your Dietary Needs/Preferences. Please Select Your Foods Through the Categories Below:</p>
+    <div class="producttab">
+    <button class="producttablinks" onclick="getProductsForCategory(event, 'Vegetables')">Vegetables</button>
+    <button class="producttablinks" onclick="getProductsForCategory(event, 'Fruits')">Fruits</button>
+    <button class="producttablinks" onclick="getProductsForCategory(event, 'Protein')">Protein</button>
+    <button class="producttablinks" onclick="getProductsForCategory(event, 'Grains')">Grains</button>
+    <button class="producttablinks" onclick="getProductsForCategory(event, 'Dairy')">Dairy</button>
+    </div>
+    <br>
+  	 Select Items to Buy:
+  	
+     <div id="Vegetables" class="producttabcontent"></div> 
+     <div id="Fruits" class="producttabcontent"></div> 
+     <div id="Protein" class="producttabcontent"></div> 
+     <div id="Grains" class="producttabcontent"></div> 
+     <div id="Dairy" class="producttabcontent"></div> 
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here are the Items in Your Cart:</p>
-  <div id="displayCart"></div>
+  	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+  		Add Selected Items to Cart.
+  	</button>
+  </div>
+
+  <div id="Cart" class="tabcontent">
+    <h3>Cart</h3>
+    <p>Here are the Items in Your Cart:</p>
+    <div id="displayCart"></div>
+  </div>
 </div>
 
 <script src="scripts/groceries.js"></script>

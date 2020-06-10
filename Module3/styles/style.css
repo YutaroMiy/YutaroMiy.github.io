@@ -4,7 +4,9 @@
   
     This CSS file contains all the display characteristics.
 
-    This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>  
+    This Style sheet is taken from https://www.w3schools.com/howto/howto_js_hover_tabs.asp  
+
+    Implemented a hover tab. 
 */
 
 
@@ -12,8 +14,10 @@
 .tab {
   overflow: hidden;
   background-color: #f1f1f1;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -25,7 +29,7 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  
+  flex-grow: 1;
 }
 
 /* Change background color of buttons on hover */
@@ -38,13 +42,27 @@
   background-color: #ccc;
 }
 
+.producttab{
+  background-color: #f1f1f1;
+  border: 2px solid black;
+  justify-content: space-between;
+  display: flex;
+}
+
+.producttablinks{
+  flex-grow: 1;
+}
+.wrap{
+  display: flex;
+  height: 450px;
+}
 /* Style the tab content */
 .tabcontent {
   background: rgba(238,130,238,0.4);
   display: none;
   padding: 6px 12px;
   border: 1px solid black;
-  border-top: none;
+  width: 800px;
 }
 
 .producttabcontent{
