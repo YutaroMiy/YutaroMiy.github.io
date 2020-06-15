@@ -1,6 +1,10 @@
 <!--
 
 Bike Repair image taken from: https://www.shutterstock.com/image-vector/bicycle-wrench-symbol-brand-identity-fix-388722601
+
+Bike Brake image taken from: https://www.wikihow.com/Stop-Bike-Brakes-from-Screeching
+
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +27,68 @@ Bike Repair image taken from: https://www.shutterstock.com/image-vector/bicycle-
 
 <body>
     <div class="jumbotron text-center">
-        <img src="images/bikerepair.JPG" class="rounded" alt="bike" width="250" height="150">
+        <img src="images/bikerepair.JPG" class="rounded-circle" alt="bike" width="250" height="150">
         <h1>Welcome to BikeBuddy</h1>
         <p class="text-center" >Servicing Ottawa's Bikes Since 1993</p>
+    </div>  
        
-    </div>   
+
+    <div class="container">
+        <h2>Services Offered</h2>
+        <h4>Here's a List of our Services:</h4>
+        
 
 
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Brake Repair</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="wrap">
+                            <div class="image">
+                                <img src="images/bikebrakes.JPG" class="rounded" alt="brakes" width="200" height="125">
+                            </div>
 
+                            <div class="description">
+
+                                <p>Here is our list of services</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Puncture</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="wrap">
+                            <div class="image">
+                                <img src="images/biketire.JPG" class="rounded" alt="tire" width="200" height="125">
+                            </div>
+
+                            <div class="description">
+
+                                <p>Here is our list of services</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Maintenance</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Form to enter name, email, phone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+</html>

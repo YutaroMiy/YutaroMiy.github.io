@@ -7,3 +7,16 @@ h1 {
   font-family: Arial, Helvetica, Sans-serif;
   font-size: 53px;
 }
+
+.wrap{
+  display: flex;
+  height: 250px;
+}
+
+.description{
+	flex-grow: 1;
+}
+
+.image{
+	margin-right: 50px;
+}
