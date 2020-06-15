@@ -8,15 +8,23 @@ h1 {
   font-size: 53px;
 }
 
-.wrap{
+.wrap {
   display: flex;
   height: 150px;
 }
 
-.description{
+.description {
 	flex-grow: 1;
 }
 
-.image{
+.image {
 	margin-right: 50px;
 }
+
+.mechanic-image {
+	height: 200px;
+}
+
+.card-columns > div {
+	height: 400px;
+} 
