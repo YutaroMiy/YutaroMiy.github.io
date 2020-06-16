@@ -4,7 +4,7 @@
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
-  font-family: Arial, Helvetica, Sans-serif;
+  font-family: Helvetica, Sans-serif;
   font-size: 53px;
 }
 
@@ -27,4 +27,29 @@ h1 {
 
 .card-columns > div {
 	height: 400px;
+}
+
+.blue-background {
+	background: #BDF0D6;
 } 
+
+.card-header {
+	background: #EEEEEE;
+}
+
+.card-link{
+	color: black;
+}
+.img-logo {
+	border: 5px solid #CCA78A;
+}
+
+.card-mechanics {
+	background-color: #DCB4B1;
+}
+
+.button-color{
+	padding: 10px;
+	background-color: #EEEEEE;
+	color: black;
+}
