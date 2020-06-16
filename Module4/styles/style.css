@@ -1,8 +1,11 @@
-/* Style sheet
-   color picker www.w3schools.com/colors/colors_picker.asp
+/* 
+	Name: Yutaro Miyata
+    Student Number: 8912340
+  
+    This CSS file contains all the display characteristics.
+    
+    Color theme picked from https://www.canva.com/colors/color-palettes/relaxed-retro/
 */
-
-/* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: Helvetica, Sans-serif;
   font-size: 53px;
