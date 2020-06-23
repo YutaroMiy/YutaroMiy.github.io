@@ -47,7 +47,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-md navbar-dark nav-background">
   		<a class="navbar-brand" href="#">BikeBuddy</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     		<span class="navbar-toggler-icon"></span>
@@ -55,16 +55,16 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 		    <ul class="navbar-nav">
 		        <li class="nav-item">
-		        	<a class="nav-link" href="#servicesOffered"><img src="images/icons8-work-48.png" alt="logo" style="width:30px;">Services Offered</a>
+		        	<a class="nav-text" href="#servicesOffered"><img src="images/icons8-work-48.png" alt="logo" style="width:30px;">Services Offered</a>
 		      	</li> 
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="#meetMechanics"><img src="images/icons8-worker-48.png" alt="logo" style="width:30px;">Meet our Mechanics</a>
+		        	<a class="nav-text" href="#meetMechanics"><img src="images/icons8-worker-48.png" alt="logo" style="width:30px;">Meet our Mechanics</a>
 		      	</li>
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="#bookAppointment"><img src="images/icons8-calendar-48.png" alt="logo" style="width:30px;">Book an Appointment</a>
+		        	<a class="nav-text" href="#bookAppointment"><img src="images/icons8-calendar-48.png" alt="logo" style="width:30px;">Book an Appointment</a>
 		      	</li>
 		      	<li class="nav-item">
-		      		<a class="nav-link" href="#contactUs"><img src="images/icons8-call-48.png" alt="logo" style="width:30px;">Contact Us</a>
+		      		<a class="nav-text" href="#contactUs"><img src="images/icons8-call-48.png" alt="logo" style="width:30px;">Contact Us</a>
 		      	</li>   
 		   	</ul>
 		</div>  
@@ -154,6 +154,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Jimmy</h4>
                     <p class="card-text">Jimmy has Been Fixing Bikes for 15 Years. He Specializes in Brake Mechanics.</p>
+                    <p class="card-text">Available from: Monday-Friday</p>
                     
                 </div>
             </div>
@@ -162,6 +163,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Brian</h4>
                     <p class="card-text">As an Apprentice, Brian has Been Fixing Bikes for 2 Years. He is Training in Chain Mechanics.</p>
+                    <p class="card-text">Available from: Tuesday-Thursday, Saturday-Sunday</p>
                     <!-- collapsible part -->
                     
                     <div id="profile" class="collapse p-3">
@@ -209,18 +211,15 @@
                         <p>Please Choose a Mechanic:</p>
                         <form>
                         	<input type="radio" id="jimmy" name="mechanic" value="jimmy">
-                        	<label for="jimmy">Jimmy</label><br>
+                        	<label for="jimmy">Jimmy (Available Mon-Fri)</label><br>
                         	<input type="radio" id="brian" name="mechanic" value="brian">
-                        	<label for="brian">Brian</label><br>
+                        	<label for="brian">Brian (Available Tues-Thurs, Sat-Sun)</label><br>
                         </form>
                         <br>
                         <h4><img src="images/icons8-calendar1-48.png" alt="logo" style="width:30px;">   3. Date and Time</h4>
                         <p>Please Select a Date and Time for this Appointment:</p>
-                        <div class="form-group row">
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
-                        </div>
+                        <p class="notes">Note: We are Closed on Statutory Holidays.</p>
+                        <input type="text" id="dateInput">
                         <br>
                         <h4><img src="images/icons8-identification-documents1-48.png" alt="Phone Number" style="width:30px;">   4. Contact Info</h4>
                         <br>

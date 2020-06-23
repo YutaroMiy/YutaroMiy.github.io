@@ -4,8 +4,32 @@
   
     This JS file contians all the functionality when any tab is clicked.
 
-    It is adapted from https://www.w3schools.com/howto/howto_js_hover_tabs.asp
 */
+
+
+var unavailableDates = ["07/01/2020","09/07/2020"]
+const setDateFormat = "mm/dd/yy";
+
+function disableDates(date) {
+
+    //Get selected mechanic value
+    var selectedValue = $("input[name='mechanic']:checked").val();
+
+    //If Jimmy is selected then disable Saturday & Sunday since he does not work those days
+    if (selectedValue == "jimmy") {
+    	if (date.getDay() == 0 || date.getDay() == 6)
+        	return [false];
+    }
+
+     //If Brian is selected then disable Monday & Friday since he does not work those days
+    if (selectedValue == "brian") {
+    	if (date.getDay() == 1 || date.getDay() == 5)
+        	return [false];
+    }
+
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) == -1 ]
+}
 
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
@@ -56,6 +80,18 @@ $(document).ready(function(){
    			$("#cardNumber").removeClass("error");
    		}
    });
+
+   $("#dateInput").datepicker(
+        {	
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2020
+            minDate: new Date('06/01/2020'),  
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates
+        }   
+   );
 
 
 });
