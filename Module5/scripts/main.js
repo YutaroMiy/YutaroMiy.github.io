@@ -1,11 +1,12 @@
 /*  
     Name: Yutaro Miyata
     Student Number: 8912340
-  
-    This JS file contians all the functionality when any tab is clicked.
+ 
 
 */
 
+
+//Dates that are unavailable are the statutory holidays
 
 var unavailableDates = ["07/01/2020","09/07/2020"]
 const setDateFormat = "mm/dd/yy";
