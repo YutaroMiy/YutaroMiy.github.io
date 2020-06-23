@@ -174,7 +174,16 @@
                           </div>
                         </form>
                         <br>
-                        <h4>2.Date and Time</h4>
+                        <h4>2.Choose a Mechanic</h4>
+                        <p>Please Choose a Mechanic:</p>
+                        <form>
+                        	<input type="radio" id="jimmy" name="mechanic" value="jimmy">
+                        	<label for="jimmy">Jimmy</label><br>
+                        	<input type="radio" id="brian" name="mechanic" value="brian">
+                        	<label for="brian">Brian</label><br>
+                        </form>
+                        <br>
+                        <h4>3.Date and Time</h4>
                         <p>Please Select a Date and Time for this Appointment:</p>
                         <div class="form-group row">
                             <div class="col-10">
@@ -182,7 +191,7 @@
                             </div>
                         </div>
                         <br>
-                        <h4>3.Contact Info</h4>
+                        <h4>4.Contact Info</h4>
                         <p>Please Enter your Full Name and your Phone Number:</p>
                         <div class="row">
                             <div class="col">
@@ -194,6 +203,9 @@
                         </div>
                         <br>
                         <input type="text" class="form-control" placeholder="Phone Number">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Credit Card Number">
+                        <p class="notes">Note: A Deposit of $15 Will be Taken in Order to Book an Appointment.</p>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info btn-default button-color" data-dismiss="modal">Book Appointment</button>

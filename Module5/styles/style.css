@@ -11,9 +11,14 @@ h1 {
   font-size: 53px;
 }
 
+.notes{ 
+	font-size: 13px;
+	font-style: italic;
+}
+
 .wrap {
-  display: flex;
-  height: 150px;
+    display: flex;
+    height: 150px;
 }
 
 .description {
