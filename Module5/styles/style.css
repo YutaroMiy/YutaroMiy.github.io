@@ -1,0 +1,58 @@
+/* 
+	Name: Yutaro Miyata
+    Student Number: 8912340
+  
+    This CSS file contains all the display characteristics.
+    
+    Color theme picked from https://www.canva.com/colors/color-palettes/relaxed-retro/
+*/
+h1 {
+  font-family: Helvetica, Sans-serif;
+  font-size: 53px;
+}
+
+.wrap {
+  display: flex;
+  height: 150px;
+}
+
+.description {
+	flex-grow: 1;
+}
+
+.image {
+	margin-right: 50px;
+}
+
+.mechanic-image {
+	height: 200px;
+}
+
+.card-columns > div {
+	height: 400px;
+}
+
+.blue-background {
+	background: #BDF0D6;
+} 
+
+.card-header {
+	background: #EEEEEE;
+}
+
+.card-link{
+	color: black;
+}
+.img-logo {
+	border: 5px solid #CCA78A;
+}
+
+.card-mechanics {
+	background-color: #DCB4B1;
+}
+
+.button-color{
+	padding: 10px;
+	background-color: #EEEEEE;
+	color: black;
+}
