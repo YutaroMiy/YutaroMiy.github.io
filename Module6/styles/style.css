@@ -1,0 +1,60 @@
+/*  
+    Name: Yutaro Miyata
+    Student Number: 8912340
+	
+    This CSS file contains all the display characteristics for each button, link, text and question.
+*/
+
+html{
+	background-color: white;
+}
+
+body{
+	background: rgba(0,250,50,0.4);
+	width: 900px;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 20px 20px 20px 20px;
+	
+}
+
+
+h1{
+	font-size: 60px;
+	text-align: center;
+	color: rgb(255,0,30);
+	font-family: Arial;
+}
+
+img{	
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	align: center;
+}
+
+th{
+	text-align: left;
+}
+
+.question{
+	background: rgba(0,75,255,0.4);
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px;
+}
+
+.button{
+	width: 50%;
+	font-size: 20px;
+	padding: 20px;
+	margin-top: 50px;
+	margin-left: 230px;
+}
+
+#signature{
+	text-align: right;
+	font-size: 20px;
+}
