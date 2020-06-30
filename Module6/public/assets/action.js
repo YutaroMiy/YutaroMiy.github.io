@@ -3,10 +3,6 @@ $(document).ready(function(){
 
   $('form').on('submit', function(e){
     e.preventDefault();  
-
-      // var item = $('form input');
-      console.log("Sending post request");
-      //console.log(item.serializeArray());
   
       $.ajax({
         type: 'POST',

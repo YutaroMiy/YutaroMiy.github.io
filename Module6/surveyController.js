@@ -46,7 +46,7 @@ module.exports = function(app){
         var colorLayout = readData("colorLayout");
         var comments = readData("comments");
         var recommend = readData("recommend");
-        //var animal = readData("animal");
+       
         res.render('showResults', {results: [wordAnswer, layoutNav, tooMuchSpace, colorLayout, comments, recommend]});
         console.log([wordAnswer, layoutNav, tooMuchSpace, colorLayout, comments, recommend]);
     });
@@ -60,7 +60,6 @@ module.exports = function(app){
     // will be recuperated here, parsed and used to update the data files
     app.post('/mySurvey', urlencodedParser, function(req, res){
         console.log(req.body);
-        console.log("Post recieved!");
         var json = req.body;
         for (var key in json){
             console.log(key + ": " + json[key]);
