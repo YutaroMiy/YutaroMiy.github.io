@@ -1,0 +1,45 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>What do people like about this layout?</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].wordAnswer %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Is the layout easy to navigate?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].layoutNav %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Is there too much space between videos?</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].tooMuchSpace %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Preferred background colors:</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].colorLayout %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Comments:</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].comments %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Would you recommend this layout to a friend?</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].recommend %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+</body>
+</html>

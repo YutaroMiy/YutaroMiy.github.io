@@ -10,10 +10,14 @@
 	<head>
 		<link href="/assets/style.css" rel = "stylesheet" type="text/css">
 		<title>YutaroMiy's Questionnaire</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
 	</head>
 
 	<body>
-		<h1>UI Evaluation Survey</h1>
+		<h1 onclick="printHi()">UI Evaluation Survey</h1>
 		<br>
 		<br>
 		<h2>
@@ -23,35 +27,35 @@
 		<a href="https://www.youtube.com"><img src="/assets/YoutubeMainPage.JPG" alt="https://www.youtube.com" width="750" height="400"></a>
 		<br>
 		<h2>Note: Some of the videos featured may be different.</h2>
-		<form id="myform" action="index.php">
+		<form>
 			<div class="question">
 				<h3> What do you like about this UI?</h3>
-				<p>Type Answer Here:<input type="text" name="WordAnswer"</p>
+				<input type="text" name="wordAnswer" placeholder="Type Answer Here:">
 				<br>
 				<br>
 				<h3>Is the layout easy to navigate?</h3>
-				<form>
-                    <input type="radio" id="yes" name="layoutNav" value="yes">
+				<div id="layoutNav">
+                    <input type="radio" id="yes" name="layoutNav" value="Yes">
                     <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="layoutNav" value="no">
+                    <input type="radio" id="no" name="layoutNav" value="No">
                     <label for="no">No</label><br>
-                </form>
+                </div>
 				<br>
 				<br>
 				<h3>Does the space for the videos take up too much space?</h3>
-				<select id="favorite">
+				<select name="tooMuchSpace">
 					<option value="Yes">Yes</option>
-					<option value="Yes">No</option>
+					<option value="No">No</option>
 				</select>
 				<br>
 				<br>
 				<h3>What would you prefer the background color to be?</h3>
-				<input type="checkbox" name="Color" value="Black">Black<br>
-				<input type="checkbox" name="Color" value="White">White<br>
-				<input type="checkbox" name="Color" value="Gold">Gold<br>
+				<input type="checkbox" name="colorLayout" value="Black">Black<br>
+				<input type="checkbox" name="colorLayout" value="White">White<br>
+				<input type="checkbox" name="colorLayout" value="Gold">Gold<br>
 				<br>
 				<h3>Do you have any other comments about the display of this UI? Please type below:</h3>
-				<textarea rows="5" cols="90"></textarea>
+				<textarea name="comments" rows="5" cols="90"></textarea>
 				<br>
 				<br>
 				<h3>I would showcase this UI layout to a friend.</h3>
@@ -64,17 +68,18 @@
 						<th>Strongly Disagree</th>
 					</tr>
 					<tr>
-						<td><input type="radio" value="Strongly Agree" name="Recommend"/></td>
-            					<td><input type="radio" value="Agree" name="Recommend"/></td>
-            					<td><input type="radio" value="Neutral" name="Recommend"/></td>
-            					<td><input type="radio" value="Disagree" name="Recommend"/></td>
-            					<td><input type="radio" value="Strongly Disagree" name="Recommend"/></td>
+						<td><input type="radio" value="Strongly Agree" name="recommend"/></td>
+            					<td><input type="radio" value="Agree" name="recommend"/></td>
+            					<td><input type="radio" value="Neutral" name="recommend"/></td>
+            					<td><input type="radio" value="Disagree" name="recommend"/></td>
+            					<td><input type="radio" value="Strongly Disagree" name="recommend"/></td>
 					</tr>
 				</table>
 			</div>
+			<button type="submit" class="btn btn-warning" id="bb">Submit Survey</button>
+			<!-- <p id="signature">Website created by Yutaro Miyata</p> -->
 		</form>
-		<button class="button">Submit Survey</button>
-		<p id="signature">Website created by Yutaro Miyata</p>
+			<script src="/assets/action.js"></script>
 	</body>
 </html>
 	
