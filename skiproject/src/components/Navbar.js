@@ -2,13 +2,12 @@ import React from 'react'
 
 const Navbar = () => {
 	return (
-		<nav className="nav-wrapper red darken-3">
+		<nav className="nav-wrapper blue lighten-2">
 			<div className="container">
 				<a className="brand-logo">GearToGo</a>
 				<button className="waves-effect waves-light btn right center-btn">Order Online</button>
 				<ul className="right">
 					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
 					<li><a href="/locations">Locations</a></li>
 					<li><a href="/exploreskis">Explore Skis</a></li>
 					<li><a href="/exploresnowboards">Explore Snowboards</a></li>
