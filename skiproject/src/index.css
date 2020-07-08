@@ -28,7 +28,32 @@ code {
   display: table;
   clear: both;
 }
+
 .locations {
 	padding: 60px;
 }
 
+.column-left {
+	float: left;
+	width: 50%;
+	padding: 30px;
+}
+
+.column-right {
+	float: left;
+	width: 50%;
+	padding: 30px;
+}
+
+.column-buttons {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	
+}
+
+.paragraph {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	overflow: auto;
+}

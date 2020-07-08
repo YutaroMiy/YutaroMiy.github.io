@@ -1,10 +1,31 @@
+/*
+	Ski photo taken from: https://unsplash.com/s/photos/ski
+*/
 import React from 'react'
 
 const Home = () => {
 	return (
 		<div className="container">
-			<h3 className="center">Home</h3>
-			<p>Hiiiii</p>
+			<div className="row">
+				<div className="column-left">
+					<h4>Welcome to GearToGo!</h4>
+					<h6>Ottawa's #1 Ski/Snowboard Shop Since 2003!</h6>
+					<p className="paragraph">We are voted Ottawa's best Ski/Snowboard shop for 
+					17 years in a row! Whether you are looking for Skis, Snowboards, Boots or a 
+					complete set, we offer them all at some of the best prices in the city!</p>
+					<div className="row">
+						<div className="column-buttons">
+							<button className="waves-effect waves-light btn-small">Explore Our Skis</button>
+						</div>
+						<div className="column-buttons">
+							<button className="waves-effect waves-light btn-small">Explore Our Boards</button>
+						</div>
+					</div>
+				</div>
+				<div className="column-right">
+					<img src="/skiing.JPG" alt ="A ski image" width="100%" />
+				</div>
+			</div>
 		</div>
 	)
 }
