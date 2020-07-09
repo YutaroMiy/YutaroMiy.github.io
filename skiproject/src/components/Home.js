@@ -2,6 +2,8 @@
 	Ski photo taken from: https://unsplash.com/s/photos/ski
 */
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
 	return (
@@ -15,10 +17,14 @@ const Home = () => {
 					complete set, we offer them all at some of the best prices in the city!</p>
 					<div className="row">
 						<div className="column-buttons">
-							<button className="waves-effect waves-light btn-small">Explore Our Skis</button>
+							<Link to="/exploreskis">
+								<button className="waves-effect waves-light btn-small">Explore Our Skis</button>
+							</Link>
 						</div>
 						<div className="column-buttons">
-							<button className="waves-effect waves-light btn-small">Explore Our Boards</button>
+							<Link to="/exploresnowboards">
+								<button className="waves-effect waves-light btn-small">Explore Our Boards</button>
+							</Link>
 						</div>
 					</div>
 				</div>

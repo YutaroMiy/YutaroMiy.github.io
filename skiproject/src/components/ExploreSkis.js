@@ -1,6 +1,7 @@
 /*
 	Rossignol AE taken from: https://www.sportchek.ca/categories/shop-by-sport/alpine-skiing/ski-packages/mens/product/rossignol-experience-74-xpress-2-mens-skis-2019-20-look-xpress-1-332899738.html#332899738%5Bcolor%5D=332899738_99
 	K2 Mindbender taken from: https://www.sportchek.ca/categories/shop-by-sport/alpine-skiing/flat-skis/mens/product/k2-mindbender-90c-mens-skis-2019-20-332927047.html#332927047%5Bcolor%5D=332927047_99
+	Atomic Vantage taken from: https://www.sportchek.ca/categories/shop-by-sport/alpine-skiing/ski-packages/adventure-all-mountain/product/atomic-vantage-79-c-mens-skis-2019-20-atomic-e-ft-10-blk-grn-332906828.html#332906828%5Bcolor%5D=332906828_99
 */
 import React from 'react'
 
