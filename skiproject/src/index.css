@@ -57,3 +57,32 @@ code {
 	padding-bottom: 30px;
 	overflow: auto;
 }
+
+.text-inputs {
+	padding-top: 30px;
+	padding-left: 100px;
+	padding-right: 80px;
+	height: 300px;
+}
+
+.active {
+	color: black;
+}
+
+.column-online-instructions {
+	display: flex;
+
+}	
+
+.column-online-arrows {
+	width: 10px;
+}
+
+.breadcrumbs-titles {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.breadcrumbs-titles:hover {
+	cursor: pointer;
+}

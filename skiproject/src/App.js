@@ -6,6 +6,7 @@ import Locations from './components/Locations'
 import ExploreSkis from './components/ExploreSkis'
 import ExploreSnowboards from './components/ExploreSnowboards'
 import ContactUs from './components/ContactUs'
+import OrderOnline from './components/OrderOnline'
 
 class App extends Component {
   render(){
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path='/exploreskis' component={ExploreSkis} />
           <Route path='/exploresnowboards' component={ExploreSnowboards} />
           <Route path='/contactus' component={ContactUs} />
+          <Route path='/orderonline' component={OrderOnline} />
         </div>
       </BrowserRouter>
     );
