@@ -4,9 +4,9 @@ import Equipment from './Equipment'
 
 const ChooseEquipment = ({previousTab,nextTab}) => {
 	return (
-		<div>
+		<div className="container-display">
 			<h3 className="center">Choose Equipment</h3>
-			<div className="container-display">
+			<div>
 				<h4 className="center">Skis:</h4>
 				<div className="row">
 					<Equipment source="/rossignolae.JPG" 
@@ -87,7 +87,7 @@ const ChooseEquipment = ({previousTab,nextTab}) => {
 					/>
 				</div>
 			</div>
-			<div className="container-display">
+			<div>
 				<h4 className="center">Snowboards:</h4>
 				<div className="row">
 					<Equipment source="/burtonripcord.JPG" 
@@ -167,9 +167,15 @@ const ChooseEquipment = ({previousTab,nextTab}) => {
 						price="$319.99"
 					/>
 				</div>
+				<div className="row">
+					<div className="button-nav">
+						<button className="btn" onClick={nextTab}>Next</button>
+					</div>
+					<div className="button-nav">
+						<button className="waves-effect waves-light btn btn-white"onClick={previousTab}>Back</button>
+					</div>
+				</div>
 			</div>
-			<button onClick={previousTab}>Back</button>
-			<button onClick={nextTab}>Next</button>
 		</div>	
 	)
 

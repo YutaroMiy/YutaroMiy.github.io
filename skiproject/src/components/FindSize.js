@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const FindSize = ({nextTab}) => {
@@ -21,17 +22,28 @@ const FindSize = ({nextTab}) => {
 	}
 
 	return (
-		<div>
-			<div>In order to determine your size, please enter your height:</div>
-			<div style={{display: 'flex'}}>
-				<div>How tall are you? (cm):</div>
+		<div className="container-display">
+			<h5>In order to determine your size, please enter your height:</h5>
+			<div className="calculate-size">
+				<h6>How tall are you? (cm):</h6>
 				<input onChange={(e) => setHeight(e.target.value)} placeHolder="Ex: 100" style={{width: '50%'}}/>
-				<button onClick={() => calculateSize()}>Calculate Height</button>
+				<button className="waves-effect waves-light btn" onClick={() => calculateSize()}>Calculate Height</button>
 			</div>
-			{calculatedSize === 0 && <div>Please enter a valid height</div>}
-			{(calculatedSize !== 0 && calculateSize) && <div>{`Your size is ${calculatedSize}`}</div>}
-			<button onClick={nextTab}>Next</button>
-			<button onClick={nextTab}>I know my height already!</button>
+			{calculatedSize === 0 && <h6>Please enter a valid height</h6>}
+			{(calculatedSize !== 0 && calculateSize) && <h6>{`Your size is ${calculatedSize}`}</h6>}
+			<div className="button-nav">
+				<button className="waves-effect waves-light btn" onClick={nextTab}>I Know My Size Already!</button>
+			</div>
+			<div className="row">
+				<div className="button-nav">
+					<button className="btn btn-white" onClick={nextTab}>Next</button>
+				</div>
+				<div className="button-nav">
+					<Link to="/">
+						<button className="waves-effect waves-light btn btn-white" onClick={nextTab}>Back to Home</button>
+					</Link>			
+				</div>
+			</div>
 		</div>	
 	)
 

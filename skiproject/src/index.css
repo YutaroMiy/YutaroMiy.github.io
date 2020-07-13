@@ -91,9 +91,57 @@ code {
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-top: 50px;
+	border: 1px solid;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
 }
 
 .equipment {
 	padding: 40px;
 	height: 100%;
+}
+
+.btn-white {
+	background-color: #b3b3b3;   
+}
+
+.button-bar {
+	padding: 30px;
+}
+
+.button-nav {
+	float: right;
+	padding: 30px;
+}
+
+.calculate-size {
+	display: flex;
+	padding-top: 25px;
+	padding-bottom: 25px; 
+}
+
+.text-entry-words {
+	float: left;
+	width: 25%;
+}
+.text-entry-box {
+	float: left;
+	width: 75%;
+}
+
+.province-postcode {
+	padding-top: 30px;
+	padding-right: 30px;
+	float: left;
+	width: 50%;
+}
+
+.text-entry-creditcard {
+	float: left;
+	width: 40%;
+}
+
+.text-entry-expiry-cvv {
+	float: left;
+	width: 10%;
 }
