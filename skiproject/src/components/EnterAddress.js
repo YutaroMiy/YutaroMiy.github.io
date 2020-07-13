@@ -1,8 +1,12 @@
 import React from 'react'
 
-const EnterAddress = () => {
+const EnterAddress = ({previousTab,nextTab}) => {
 	return (
-		<div>C</div>	
+		<div>
+			<p>Enter Address</p>
+			<button onClick={previousTab}>Back</button>
+			<button onClick={nextTab}>Next</button>
+		</div>	
 	)
 
 }

@@ -86,3 +86,14 @@ code {
 .breadcrumbs-titles:hover {
 	cursor: pointer;
 }
+
+.container-display {
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 50px;
+}
+
+.equipment {
+	padding: 40px;
+	height: 100%;
+}

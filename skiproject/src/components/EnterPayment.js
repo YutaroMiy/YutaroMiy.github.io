@@ -1,8 +1,11 @@
 import React from 'react'
 
-const EnterPayment = () => {
+const EnterPayment = ({previousTab}) => {
 	return (
-		<div>PAy</div>	
+		<div>
+			<p>Enter Payment</p>
+			<button onClick={previousTab}>Back</button>
+		</div>	
 	)
 
 }

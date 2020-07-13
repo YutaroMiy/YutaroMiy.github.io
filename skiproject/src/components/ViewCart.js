@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ViewCart = () => {
+const ViewCart = ({previousTab,nextTab}) => {
 	return (
-		<div>Cart</div>	
+		<div>
+			<p>View Cart</p>
+			<button onClick={previousTab}>Back</button>
+			<button onClick={nextTab}>Next</button>
+		</div>	
 	)
 
 }

@@ -5,14 +5,14 @@
 */
 import React from 'react'
 
-const ExploreSkis = () => {
+const ExploreSkis = ({showCheckboxes}) => {
 	return (
 		<div className="container">
-			<h3 className="center">Explore Skis</h3>
-			<div className="row">
+			{!showCheckboxes && <h3 className="center">Explore Skis</h3>}
+      <div className="row">
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
-  					<h5 className="center">Rossignol 2020 AE Set</h5>
+            <h5 className="center">Rossignol 2020 AE Set</h5>
   					<p className="center">Comes With Skis, Boots, Poles</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
