@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const ContactUs = () => {
+
+	const [submitted, setSubmitted] = useState(0);
+
+	function changeSubmitted() {
+		setSubmitted(1);
+	}
+
 	return (
 		<div className="container">
 			<h3 className="center">Contact Us</h3>
@@ -28,16 +35,34 @@ const ContactUs = () => {
 						<p>(613) - 345 1234</p>
 					</div>
 				</div>
-				<div className="center column-buttons">
-					<h5>Or, send an email here:</h5> 
-					<div className="text-inputs">
-						<input type="text" placeholder="Name:" />
-						<input type="text" placeholder="Email Address:" />
-						<textarea rows="50" cols="90"></textarea>
-						<Link to="/contactus">
-								<button className="waves-effect waves-light btn-small">Send Email</button>
-						</Link>
+				<div className="column-buttons">
+					<h5 className="center">Or, send an email here:</h5>
+					<div>
+						<div className="form-row">
+						    <div className="form-group col-md-6">
+						    	<label>First Name:</label>
+						        <input type="text" className="form-control" />
+						    </div>
+						    <div className="form-group col-md-6">
+						        <label>Last Name:</label>
+						        <input type="text" className="form-control" />
+						    </div>
+						</div>
+						<div className="form-group">
+						    <label>Email Address</label>
+						    <input type="text" class="form-control" />
+						</div>
+						<div className="form-group">
+							<label>Write Your Email Here:</label>
+							<textarea className="form-control"></textarea>
+						</div>
+						<div className="btn-toolbar">
+							<div className="btn-group">
+								<button className="btn btn-info"onClick={() => changeSubmitted()}>Submit</button>
+							</div>
+						</div>
 					</div>
+					{submitted === 1 && <h6 className="good-message center">Thank you for submitting!</h6>}
 				</div>
 			</div>
 		</div>

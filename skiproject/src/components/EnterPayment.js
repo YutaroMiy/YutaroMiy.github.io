@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ThankYou from './ThankYou'
+import { Link } from 'react-router-dom'
 
 const EnterPayment = ({previousTab,nextTab}) => {
 	
@@ -12,7 +12,9 @@ const EnterPayment = ({previousTab,nextTab}) => {
 	const [cvv, setCVV] = useState('');
 	const [cvvNum, setCVVNum] = useState('');
 
-	const [disabled,setDisabled] = useState('true');
+	const [isDisabled,setIsDisabled] = useState(true);
+
+	const [needHelp, setNeedHelp] = useState('');
 
 	//this function should stop the submit function from working
 	function validateFields() {
@@ -38,8 +40,11 @@ const EnterPayment = ({previousTab,nextTab}) => {
 			setExpiryDate(1);
 		}
 
-		if(validateCreditCard() && validateCVV() && validateExpiry()) {
-			setDisabled('false');
+		if(!validateCreditCard() || !validateCVV() || !validateExpiry()) {
+			setIsDisabled(true);
+		}
+		else {
+			setIsDisabled(false);
 		}
 
 	}
@@ -79,6 +84,10 @@ const EnterPayment = ({previousTab,nextTab}) => {
 	    }
 	}
 
+	function displayHelp() {
+		setNeedHelp(1);
+	}
+
 	return (
 		<div className="container-display">
 			<h4 className="center">Enter Payment Infomation</h4>
@@ -91,7 +100,7 @@ const EnterPayment = ({previousTab,nextTab}) => {
 					</div>
 				</div>
 				{creditCardNum === 0 && <h6 className="error-message">Please enter a valid credit card number.</h6>}
-				{creditCardNum === 1 && <h6 className="error-message">Valid!</h6>}
+				{creditCardNum === 1 && <h6 className="good-message">Valid!</h6>}
 				<div className="form-group row">
 					<label className="col-sm-3 col-form-label">Expiry Date:</label>
 					<div className="col-sm-3">
@@ -99,15 +108,22 @@ const EnterPayment = ({previousTab,nextTab}) => {
 					</div>
 				</div>
 				{expiryDate === 0 && <h6 className="error-message">Please enter a valid non-expired date.</h6>}
-				{expiryDate === 1 && <h6 className="error-message">Valid!</h6>}
+				{expiryDate === 1 && <h6 className="good-message">Valid!</h6>}
 				<div className="form-group row">
 					<label className="col-sm-3 col-form-label">CVV:</label>
 					<div className="col-sm-2">
 						<input type="text" className="form-control" onChange={(e) => setCVV(e.target.value)} placeholder="Ex.123" />
 					</div>
 				</div>
+				<p><a href="#" className="text-primary" onClick={() => displayHelp()}>What is this?</a></p>
+				{needHelp === 1 && <h6 className="form-text"><img src="/icons8-card-verification-value-64.png" alt="CVV" style={{width:'30px;'}} />
+				The CVV is a group of three numbers located on the back of your card used for extra security functions.</h6>}
 				{cvvNum === 0 && <h6 className="error-message">Please enter a valid CVV.</h6>}
-				{cvvNum === 1 && <h6 className="error-message">Valid!</h6>}
+				{cvvNum === 1 && <h6 className="good-message">Valid!</h6>}
+				<button className="btn btn-info" onClick={() => validateFields()}>Validate</button>
+				<small className="form-text text-muted">
+					A valid credit card is needed in order to make a purchase. 
+				</small>
 			</div>
 			
 			
@@ -116,7 +132,9 @@ const EnterPayment = ({previousTab,nextTab}) => {
 					<button className="btn btn-light" onClick={previousTab}>Back</button>
 				</div>
 				<div className="btn-group button-pos">
-					<button className="btn btn-info" onClick={() => validateFields()}>Place Order</button>
+					<Link to="/thankyou">
+						<button className="btn btn-info" disabled={isDisabled}>Place Order</button>
+					</Link>
 				</div>
 			</div>
 

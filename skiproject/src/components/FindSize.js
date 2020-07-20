@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 
 const FindSize = ({nextTab}) => {
+
 	const [height, setHeight] = useState('');
 	const [weight, setWeight] = useState('');
 	const [calculatedSize, setCalculatedSize] = useState('');
+	const [needHelp, setNeedHelp] = useState('');
 
 	function calculateSize() {
 		if ((!height || height <= 0) && (!weight || weight <= 0)) {
@@ -28,10 +30,13 @@ const FindSize = ({nextTab}) => {
 		}
 	}
 
+	function displayHelp() {
+		setNeedHelp(1);
+	}
 	
 	return (
 		<div className="container-display">
-			<h5>In order to determine your size, please enter your height:</h5>
+			<h5>In order to determine your size, please enter your height & weight:</h5>
 			<div>
 				<div className="form-group">
 					<label>How tall are you?</label>
@@ -46,6 +51,8 @@ const FindSize = ({nextTab}) => {
 					{calculatedSize === 1 && <h6 className="error-message">Please enter a valid weight</h6>}
 				</div>
 				<button className="btn btn-info" onClick={() => calculateSize()}>Calculate Size</button>
+				<p><a href="#" className="text-primary" onClick={() => displayHelp()}>Why do I need to enter my height and weight?</a></p>
+				{needHelp === 1 && <p className="form-text">Your height and weight are needed to help determine a Ski/Snowboard size which best fits you!</p>}
 			</div> 
 			{(calculatedSize !== 0 && calculatedSize !== 1 && calculatedSize !== -1 && calculateSize) && <h6>{`Your size is ${calculatedSize}`}</h6>}
 			<div className="btn-toolbar button-bar">
