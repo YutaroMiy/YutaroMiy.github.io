@@ -18,12 +18,12 @@ const Home = () => {
 					<div className="row">
 						<div className="column-buttons">
 							<Link to="/exploreskis">
-								<button className="waves-effect waves-light btn-small">Explore Our Skis</button>
+								<button className="btn btn-info navbar-btn">Explore Our Skis</button>
 							</Link>
 						</div>
 						<div className="column-buttons">
 							<Link to="/exploresnowboards">
-								<button className="waves-effect waves-light btn-small">Explore Our Boards</button>
+								<button className="btn btn-info navbar-btn">Explore Our Boards</button>
 							</Link>
 						</div>
 					</div>

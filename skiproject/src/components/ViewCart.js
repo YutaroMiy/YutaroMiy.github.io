@@ -4,12 +4,12 @@ const ViewCart = ({previousTab,nextTab}) => {
 	return (
 		<div className="container-display">
 			<h4 className="center">View Cart</h4>
-			<div className="row">
-				<div className="button-nav">
-					<button className="waves-effect waves-light btn" onClick={nextTab}>Next</button>
+			<div className="btn-toolbar button-bar">
+				<div className="btn-group button-pos">
+					<button className="btn btn-light" onClick={previousTab}>Back</button>
 				</div>
-				<div className="button-nav">
-					<button className="btn btn-white" onClick={previousTab}>Back</button>
+				<div className="btn-group button-pos">
+					<button className="btn btn-info" onClick={nextTab}>Next</button>
 				</div>
 			</div>
 		</div>	

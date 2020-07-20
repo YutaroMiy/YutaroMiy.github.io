@@ -12,9 +12,27 @@ code {
     monospace;
 }
 
+.nav-words {
+	color: #ffffff; 
+	padding: 25px;
+}
+
+.nav-brand-color {
+	color: #ffffff;
+	padding-left: 50px; 
+}
+
+.nav-nav {
+	display:flex;
+}
+
 .center-btn {
 	top: 15px;
 	left: 50px;
+}
+
+.center {
+	text-align: center;
 }
 
 .column {
@@ -71,7 +89,6 @@ code {
 
 .column-online-instructions {
 	display: flex;
-
 }	
 
 .column-online-arrows {
@@ -94,6 +111,7 @@ code {
 	border: 1px solid;
 	border-bottom-right-radius: 8px;
 	border-bottom-left-radius: 8px;
+	overflow: auto;
 }
 
 .equipment {
@@ -106,12 +124,11 @@ code {
 }
 
 .button-bar {
-	padding: 30px;
+	float: right;
 }
 
-.button-nav {
-	float: right;
-	padding: 30px;
+.button-pos {
+	padding: 15px;
 }
 
 .calculate-size {
@@ -144,4 +161,9 @@ code {
 .text-entry-expiry-cvv {
 	float: left;
 	width: 10%;
+}
+
+.error-message {
+	font-size: 12;
+	color: #f00000;
 }

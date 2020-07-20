@@ -3,20 +3,23 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 	return (
-		<nav className="nav-wrapper blue lighten-2">
-			<div className="container">
-				<a className="brand-logo">GearToGo</a>
-				<Link to="/orderonline">
-					<button className="waves-effect waves-light btn right center-btn">Order Online</button>
-				</Link>
-				<ul className="right">
-					<li><a href="/">Home</a></li>
-					<li><a href="/locations">Locations</a></li>
-					<li><a href="/exploreskis">Explore Skis</a></li>
-					<li><a href="/exploresnowboards">Explore Snowboards</a></li>
-					<li><a href="/contactus">Contact Us</a></li>
+		<nav className="navbar navbar-inverse">
+			<div className="container-fluid bg-primary p-2 jumbotron">
+				<div className="navbar-header">
+					<a className="nav-brand-color h2 text-light">GearToGo</a>
+				</div>
+				<ul className="nav nav-nav navbar-right">
+					<li className="nav-item"><a className="nav-words" href="/">Home</a></li>
+					<li className="nav-item"><a className="nav-words" href="/locations">Locations</a></li>
+					<li className="nav-item"><a className="nav-words" href="/exploreskis">Explore Skis</a></li>
+					<li className="nav-item"><a className="nav-words" href="/exploresnowboards">Explore Snowboards</a></li>
+					<li className="nav-item"><a className="nav-words" href="/contactus">Contact Us</a></li>
 				</ul>
-				
+				<ul className="nav navbar-nav navbar-right">
+					<Link to="/orderonline">
+						<button className="btn btn-info navbar-btn">Order Online</button>
+					</Link>
+				</ul>
 			</div>
 		</nav>
 

@@ -5,66 +5,58 @@ const EnterAddress = ({previousTab,nextTab}) => {
 		<div className="container-display">
 			<h4 className="center">Enter Shipping Address</h4>
 			<h6>Please Enter your Shipping Infomation:</h6>
-			<div className="row">
-				<div className="column-left">
-					<div className="text-entry-words">
-						<h6>First Name:</h6>
+			<div>
+				<div className="form-row">
+					<div className="form-group col-md-6">
+						<label>First Name:</label>
+						<input type="text" className="form-control" />
 					</div>
-					<div className="text-entry-box">
-						<input type="text" />
-					</div>
-				</div>
-				<div className="column-right">
-					<div className="text-entry-words center">
-						<h6>Last Name:</h6>
-					</div>
-					<div className="text-entry-box">
-						<input type="text" />
+					<div className="form-group col-md-6">
+						<label>Last Name:</label>
+						<input type="text" className="form-control" />
 					</div>
 				</div>
-				<div className="button-bar">
-					<div className="text-entry-words">
-						<h6>Email Address:</h6>
-					</div>
-					<div className="text-entry-box">
-						<input type="text" />
-					</div>
-					<div className="text-entry-words">
-						<h6>Shipping Address:</h6>
-					</div>
-					<div className="text-entry-box">
-						<input type="text" />
-					</div>
+				<div className="form-group">
+					<label>Email Address:</label>
+					<input type="text" className="form-control" />
 				</div>
-				<div className="column-left">
-					<div className="text-entry-words">
-						<h6>City/Town:</h6>
-					</div>
-					<div className="text-entry-box">
-						<input type="text" />
-					</div>
+				<div className="form-group">
+					<label>Shipping Address:</label>
+					<input type="text" className="form-control" />
 				</div>
-				<div className="province-postcode">
-						<div className="text-entry-words center">
-							<h6>Province:</h6>
-						</div>
-						<div className="text-entry-words">
-							<input type="text" />
-						</div>
-						<div className="text-entry-words">
-							<h6>Postal Code:</h6>
-						</div>
-						<div className="text-entry-words">
-							<input type="text" />
-						</div>
+				<div className="form-row">
+					<div className="form-group col-md-6">
+						<label>City/Town:</label>
+						<input type="text" className="form-control" />
+					</div>
+					<div className="form-group col-md-4">
+						<label>Province:</label>
+						<select className="form-control">
+							<option selected>Choose...</option>
+							<option>AB</option>
+							<option>BC</option>
+							<option>MN</option>
+							<option>NB</option>
+							<option>NL</option>
+							<option>NS</option>
+							<option>ON</option>
+							<option>PE</option>
+							<option>QC</option>
+							<option>SK</option>
+						</select>
+					</div>
+					<div className="form-group col-md-2">
+						<label>Postal Code:</label>
+						<input type="text" className="form-control" placeholder="Ex.K1N1A1" />
+					</div>
 				</div>
 			</div>
-			<div className="row">
-				<div className="button-nav">
-					<button className="waves-effect waves-light btn" onClick={nextTab}>Next</button>
+			<div className="btn-toolbar button-bar">
+				<div className="btn-group button-pos">
+					<button className="btn btn-light" onClick={previousTab}>Back</button>
 				</div>
-				<div className="button-nav">
-					<button className="btn btn-white" onClick={previousTab}>Back</button>
+				<div className="btn-group button-pos">
+					<button className="btn btn-info" onClick={nextTab}>Next</button>
 				</div>
 			</div>
 		</div>	
