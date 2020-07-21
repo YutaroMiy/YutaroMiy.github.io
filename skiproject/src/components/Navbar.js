@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({setLanguage}) => {
+
 	return (
 		<nav className="navbar navbar-inverse">
 			<div className="container-fluid bg-primary p-2 jumbotron">
@@ -15,6 +16,15 @@ const Navbar = () => {
 					<li className="nav-item"><a className="nav-words" href="/exploresnowboards">Explore Snowboards</a></li>
 					<li className="nav-item"><a className="nav-words" href="/contactus">Contact Us</a></li>
 				</ul>
+			    <div className="dropdown">
+					<button className="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Language
+					</button>
+					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					    <a onClick={() => setLanguage('english') }className="dropdown-item" href="#">English</a>
+					    <a onClick={() => setLanguage('french') } className="dropdown-item" href="#">French</a>
+					</div>
+				</div>
 				<ul className="nav navbar-nav navbar-right">
 					<Link to="/orderonline">
 						<button className="btn btn-info navbar-btn">Order Online</button>

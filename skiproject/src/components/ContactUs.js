@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const ContactUs = () => {
+const ContactUs = ({language}) => {
 
 	const [submitted, setSubmitted] = useState(0);
 

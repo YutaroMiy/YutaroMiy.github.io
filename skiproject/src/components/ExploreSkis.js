@@ -5,14 +5,28 @@
 */
 import React from 'react'
 
-const ExploreSkis = ({showCheckboxes}) => {
+const words = {
+  english: {
+    title: "Explore Skis",
+    set: "Set",
+    skis: "Skis Only",
+    skisBoot: "Skis & Boots",
+  },
+  french: {
+    title: "Explorez les skis",
+    set: "L'Ensemble",
+    skis: "Seulement Des Skis",
+    skisBoots: "Skis et Chaussures"
+  }
+}
+const ExploreSkis = ({showCheckboxes, language}) => {
 	return (
 		<div className="container">
-			{!showCheckboxes && <h3 className="center">Explore Skis</h3>}
+			{!showCheckboxes && <h3 className="center">{words[language].title}</h3>}
       <div className="row">
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
-            <h5 className="center">Rossignol 2020 AE Set</h5>
+            <h5 className="center">Rossignol 2020 AE {words[language].set}</h5>
   					<p className="center">Comes With Skis, Boots, Poles</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
@@ -20,7 +34,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
-  					<h5 className="center">Rossignol 2020 AE (Skis Only)</h5>
+  					<h5 className="center">Rossignol 2020 AE ({words[language].skis})</h5>
   					<p className="center">Skis Only</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">$329.99</p>
@@ -28,7 +42,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
-  					<h5 className="center">Rossignol 2020 AE (Skis & Boots)</h5>
+  					<h5 className="center">Rossignol 2020 AE ({words[language].skisBoots})</h5>
   					<p className="center">Skis & Boots Set.</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
@@ -38,7 +52,7 @@ const ExploreSkis = ({showCheckboxes}) => {
 			<div className="row">
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
-  					<h5 className="center">K2 Mindbender Set</h5>
+  					<h5 className="center">K2 Mindbender {words[language].set}</h5>
   					<p className="center">Comes With Skis, Boots, Poles</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 7 - 12</p>
@@ -46,7 +60,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
-  					<h5 className="center">K2 Mindbender (Skis Only)</h5>
+  					<h5 className="center">K2 Mindbender ({words[language].skis})</h5>
   					<p className="center">Skis Only</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">$379.99</p>
@@ -54,7 +68,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
-  					<h5 className="center">K2 Mindbender (Skis & Boots)</h5>
+  					<h5 className="center">K2 Mindbender ({words[language].skisBoots})</h5>
   					<p className="center">Skis & Boots Set.</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 7 - 12</p>
@@ -64,7 +78,7 @@ const ExploreSkis = ({showCheckboxes}) => {
 			<div className="row">
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
-  					<h5 className="center">Atomic Vantage Set</h5>
+  					<h5 className="center">Atomic Vantage {words[language].set}</h5>
   					<p className="center">Comes With Skis, Boots, Poles</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 2 - 9</p>
@@ -72,7 +86,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
-  					<h5 className="center">Atomic Vantage (Skis Only)</h5>
+  					<h5 className="center">Atomic Vantage ({words[language].skis})</h5>
   					<p className="center">Skis Only</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">$269.99</p>
@@ -80,7 +94,7 @@ const ExploreSkis = ({showCheckboxes}) => {
   				</div>
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
-  					<h5 className="center">Atomic Vantage (Skis & Boots)</h5>
+  					<h5 className="center">Atomic Vantage ({words[language].skisBoots})</h5>
   					<p className="center">Skis & Boots Set.</p>
   					<p className="center">Available Sizes: S,M,L</p>
   					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>

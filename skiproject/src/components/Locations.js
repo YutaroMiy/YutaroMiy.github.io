@@ -1,10 +1,24 @@
 import React from 'react'
 
-const Locations = () => {
+const words = {
+	english: {
+		title: "Locations",
+		operate: "We Operate Multiple Locations Across the Ottawa Region",
+		weekdays: "Mon-Fri",
+		weekends: "Sat-Sun",
+	},
+	french: {
+		title: "Emplacements",
+		operate: "Nous exploitons plusieurs emplacements dans la région d'Ottawa",
+		weekdays: "Lundi-Vendredi",
+		weekends: "Samedi-Dimanche",
+	}
+}
+const Locations = ({language}) => {
 	return (
 		<div className="container">
-			<h3 className="center">Locations</h3>
-			<h5 className="center">We Operate Multiple Locations Across the Ottawa Region</h5>
+			<h3 className="center">{words[language].title}</h3>
+			<h5 className="center">{words[language].operate}</h5>
 			<div className="row">
   				<div className="column locations">
   					<iframe 
@@ -20,8 +34,8 @@ const Locations = () => {
   					<h5 className="center">Centertown</h5>
   					<p className="center">123 Bank St.</p>
   					<p className="center">Ottawa, ON</p>
-  					<p className="center">Mon - Fri: 8AM - 8PM</p>
-  					<p className="center">Sat - Sun: 8AM - 10PM</p>
+  					<p className="center">{words[language].weekdays}: 8AM - 8PM</p>
+  					<p className="center">{words[language].weekends}: 8AM - 10PM</p>
   					<p className="center">(613) - 345 1234</p>
   				</div>
   				<div className="column locations">
@@ -38,8 +52,8 @@ const Locations = () => {
   					<h5 className="center">Kanata</h5>
   					<p className="center">123 Terry Fox Dr.</p>
   					<p className="center">Kanata, ON</p>
-  					<p className="center">Mon - Fri: 8AM - 6PM</p>
-  					<p className="center">Sat - Sun: 8AM - 8PM</p>
+  					<p className="center">{words[language].weekdays}: 8AM - 6PM</p>
+  					<p className="center">{words[language].weekends}: 8AM - 8PM</p>
   					<p className="center">(613) - 456 3456</p>
   				</div>
   				<div className="column locations">
@@ -56,8 +70,8 @@ const Locations = () => {
   					<h5 className="center">Orleans</h5>
   					<p className="center">123 Trim Rd.</p>
   					<p className="center">Orleans, ON</p>
-  					<p className="center">Mon - Fri: 8AM - 5PM</p>
-  					<p className="center">Sat - Sun: 8AM - 7PM</p>
+  					<p className="center">{words[language].weekdays}: 8AM - 5PM</p>
+  					<p className="center">{words[language].weekends}: 8AM - 7PM</p>
   					<p className="center">(613) - 024 8901</p>
   				</div>
 			</div>

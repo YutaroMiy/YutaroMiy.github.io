@@ -5,7 +5,7 @@
 */
 import React from 'react'
 
-const ExploreSnowboards = () => {
+const ExploreSnowboards = ({language}) => {
 	return (
 		<div className="container">
 			<h3 className="center">Explore Snowboards</h3>

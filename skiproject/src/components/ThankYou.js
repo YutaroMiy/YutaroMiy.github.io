@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ThankYou = ({previousTab}) => {
+const ThankYou = ({language}) => {
 	return(
 		<div className="container-display">
 			<div className="container-display">

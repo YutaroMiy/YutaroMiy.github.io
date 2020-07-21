@@ -4,12 +4,34 @@ import ChooseEquipment from './ChooseEquipment'
 import ViewCart from './ViewCart'
 import EnterAddress from './EnterAddress'
 import EnterPayment from './EnterPayment'
-import ThankYou from './ThankYou'
 
 
-const OrderOnline = () => {
+const OrderOnline = ({language}) => {
 	
 	const [tabName,setTabName] = useState('find-size'); 
+	const [chosenItems, setChosenItems] = useState([]);
+
+	function addItemToCart(price, title) {
+		const removedItem = chosenItems.filter(item => item.title !== title);
+		if ( removedItem.length === chosenItems.length) {
+			const items = chosenItems
+			const newItem = {
+				title: title,
+				price: price
+			}
+			items.push(newItem)
+			setChosenItems(items);
+		}
+		
+		else {
+			setChosenItems(removedItem);
+		}
+	}
+
+	function removeItem(title) {
+		const items = chosenItems.filter(item => item.title !== title);
+		setChosenItems(items);
+	}
 
 	return (
 		<div className="container">
@@ -38,11 +60,11 @@ const OrderOnline = () => {
 			    </div>
 			</nav>
 			{tabName === 'find-size' && < FindSize nextTab={() => setTabName('choose-equipment')} />}
-			{tabName === 'choose-equipment' && < ChooseEquipment nextTab={() => setTabName('view-cart')} previousTab={() => setTabName('find-size')} />}
-			{tabName === 'view-cart' && < ViewCart nextTab={() => setTabName('enter-address')} previousTab={() => setTabName('choose-equipment')}/>}
+			{tabName === 'choose-equipment' && < ChooseEquipment addItemToCart={(title, price) => addItemToCart(price, title)} nextTab={() => setTabName('view-cart')} previousTab={() => setTabName('find-size')} />}
+			{tabName === 'view-cart' && < ViewCart removeItem={(title) => removeItem(title)} chosenItems={chosenItems} nextTab={() => setTabName('enter-address')} previousTab={() => setTabName('choose-equipment')} />}
 			{tabName === 'enter-address' && < EnterAddress nextTab={() => setTabName('enter-payment')} previousTab={() => setTabName('view-cart')} />}
-			{tabName === 'enter-payment' && < EnterPayment previousTab={() => setTabName('enter-address')} nextTab={() => setTabName('thank-you')}/>}
-			{tabName === 'thank-you' && < ThankYou previousTab={() => setTabName('enter-address')}/>}
+			{tabName === 'enter-payment' && < EnterPayment previousTab={() => setTabName('enter-address')} />}
+			
 		</div>
 	)
 }

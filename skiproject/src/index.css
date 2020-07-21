@@ -172,3 +172,7 @@ code {
 	font-size: 12;
 	color: #62d624;
 }
+
+.remove-item:hover {
+	cursor: pointer;
+}
