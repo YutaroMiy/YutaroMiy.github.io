@@ -22,11 +22,10 @@ class App extends Component {
   }
 
   render() {
-    console.log("language", this.state.language);
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar setLanguage={(language) => this.setLanguage(language)}/>
+          <Navbar setLanguage={(language) => this.setLanguage(language)} language={this.state.language}/>
           <Route exact path='/' component={() => <Home language={this.state.language}/>} />
           <Route path='/locations' component={() => <Locations language={this.state.language}/>} />
           <Route path='/exploreskis' component={() => <ExploreSkis language={this.state.language}/>} />

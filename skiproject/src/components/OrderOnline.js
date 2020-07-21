@@ -5,6 +5,24 @@ import ViewCart from './ViewCart'
 import EnterAddress from './EnterAddress'
 import EnterPayment from './EnterPayment'
 
+const words = {
+	english: {
+		title: "Order Online",
+		findSize: "Find Size",
+		chooseEquipment: "Choose Equipment",
+		myCart: "My Cart",
+		enterAddress: "Enter Address",
+		enterPayment: "Enter Payment Information"
+	},
+	french: {
+		title: "Commander en Ligne",
+		findSize: "Trouver ma taille",
+		chooseEquipment: "Choisissez l'Équipement",
+		myCart: "Mon Panier",
+		enterAddress: "Entrer l'Adresse",
+		enterPayment: "Entrez Conditions de Vente"
+	}
+}
 
 const OrderOnline = ({language}) => {
 	
@@ -35,35 +53,35 @@ const OrderOnline = ({language}) => {
 
 	return (
 		<div className="container">
-			<h3 className="center">Order Online</h3>
+			<h3 className="center">{words[language].title}</h3>
 			<nav>
 			    <div className="breadcrumb">
 			      	<div className="col s12 column-online-instructions">
-				        <a href="#!" className={`breadcrumbs-titles ${tabName==='find-size'?"active":""}`}> Find Size </a>
+				        <a href="#!" className={`breadcrumbs-titles ${tabName==='find-size'?"active":""}`}> {words[language].findSize} </a>
 				        <div className="center">
 				        	>
 				        </div>
-				        <a href="#!" className={`breadcrumbs-titles ${tabName==='choose-equipment'?"active":""}`}> Choose Equipment </a>
+				        <a href="#!" className={`breadcrumbs-titles ${tabName==='choose-equipment'?"active":""}`}> {words[language].chooseEquipment} </a>
 				        <div className="center">
 				        	>
 				        </div>
-				        <a href="#!" className={`breadcrumbs-titles ${tabName==='view-cart'?"active":""}`}> View Cart </a>
+				        <a href="#!" className={`breadcrumbs-titles ${tabName==='view-cart'?"active":""}`}> {words[language].myCart} </a>
 				        <div className="center">
 				        	>
 				        </div>
-				        <a href="#!" className={`breadcrumbs-titles ${tabName==='enter-address'?"active":""}`}> Enter Address </a>
+				        <a href="#!" className={`breadcrumbs-titles ${tabName==='enter-address'?"active":""}`}> {words[language].enterAddress} </a>
 				    	<div className="center">
 				        	>
 				        </div>
-				        <a href="#!" className={`breadcrumbs-titles ${tabName==='enter-payment'?"active":""}`}> Enter Payment Information </a>
+				        <a href="#!" className={`breadcrumbs-titles ${tabName==='enter-payment'?"active":""}`}> {words[language].enterPayment} </a>
 				    </div>
 			    </div>
 			</nav>
-			{tabName === 'find-size' && < FindSize nextTab={() => setTabName('choose-equipment')} />}
-			{tabName === 'choose-equipment' && < ChooseEquipment addItemToCart={(title, price) => addItemToCart(price, title)} nextTab={() => setTabName('view-cart')} previousTab={() => setTabName('find-size')} />}
-			{tabName === 'view-cart' && < ViewCart removeItem={(title) => removeItem(title)} chosenItems={chosenItems} nextTab={() => setTabName('enter-address')} previousTab={() => setTabName('choose-equipment')} />}
-			{tabName === 'enter-address' && < EnterAddress nextTab={() => setTabName('enter-payment')} previousTab={() => setTabName('view-cart')} />}
-			{tabName === 'enter-payment' && < EnterPayment previousTab={() => setTabName('enter-address')} />}
+			{tabName === 'find-size' && < FindSize nextTab={() => setTabName('choose-equipment')} language={language} />}
+			{tabName === 'choose-equipment' && < ChooseEquipment addItemToCart={(title, price) => addItemToCart(price, title)} nextTab={() => setTabName('view-cart')} previousTab={() => setTabName('find-size')} language={language} />}
+			{tabName === 'view-cart' && < ViewCart removeItem={(title) => removeItem(title)} chosenItems={chosenItems} nextTab={() => setTabName('enter-address')} previousTab={() => setTabName('choose-equipment')} language={language} />}
+			{tabName === 'enter-address' && < EnterAddress nextTab={() => setTabName('enter-payment')} previousTab={() => setTabName('view-cart')} language={language} />}
+			{tabName === 'enter-payment' && < EnterPayment previousTab={() => setTabName('enter-address')} language={language} />}
 			
 		</div>
 	)

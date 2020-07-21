@@ -1,38 +1,68 @@
 import React from 'react'
 
-const EnterAddress = ({previousTab,nextTab}) => {
+const EnterAddress = ({previousTab,nextTab,language}) => {
+
+	const words = {
+	  english: {
+	    title: "Enter Shipping Address",
+	    info: "Please Enter your Shipping Information:",
+	    firstName: "First Name:",
+		lastName: "Last Name:",
+		email: "Email Address:",
+		shipping: "Shipping Address:",
+		city: "City/Town:",
+		choose: "Choose...",
+		postCode: "Postal Code:",
+	    back: "Back",
+		next: "Next",
+	  },
+	  french: {
+	    title: "Entrer l'Adresse",
+	    info: "Veuillez Saisir vos Informations de Livraison:",
+	    firstName: "Prénom:",
+		lastName: "Nom de Famille:",
+		email: "Adresse Courriel:",
+		shipping: "Adresse de Livraison:",
+		city: "Ville:",
+		choose: "Choix...",
+		postCode: "Code Postal:",
+	    back: "Retour",
+		next: "Prochain",
+	  }
+	}
+
 	return (
 		<div className="container-display">
-			<h4 className="center">Enter Shipping Address</h4>
-			<h6>Please Enter your Shipping Infomation:</h6>
+			<h4 className="center">{words[language].title}</h4>
+			<h6>{words[language].info}</h6>
 			<div>
 				<div className="form-row">
 					<div className="form-group col-md-6">
-						<label>First Name:</label>
+						<label>{words[language].firstName}</label>
 						<input type="text" className="form-control" />
 					</div>
 					<div className="form-group col-md-6">
-						<label>Last Name:</label>
+						<label>{words[language].lastName}</label>
 						<input type="text" className="form-control" />
 					</div>
 				</div>
 				<div className="form-group">
-					<label>Email Address:</label>
+					<label>{words[language].email}</label>
 					<input type="text" className="form-control" />
 				</div>
 				<div className="form-group">
-					<label>Shipping Address:</label>
+					<label>{words[language].shipping}</label>
 					<input type="text" className="form-control" />
 				</div>
 				<div className="form-row">
 					<div className="form-group col-md-6">
-						<label>City/Town:</label>
+						<label>{words[language].city}</label>
 						<input type="text" className="form-control" />
 					</div>
 					<div className="form-group col-md-4">
 						<label>Province:</label>
 						<select className="form-control">
-							<option selected>Choose...</option>
+							<option selected>{words[language].choose}</option>
 							<option>AB</option>
 							<option>BC</option>
 							<option>MN</option>
@@ -46,17 +76,17 @@ const EnterAddress = ({previousTab,nextTab}) => {
 						</select>
 					</div>
 					<div className="form-group col-md-2">
-						<label>Postal Code:</label>
+						<label>{words[language].postCode}</label>
 						<input type="text" className="form-control" placeholder="Ex.K1N1A1" />
 					</div>
 				</div>
 			</div>
 			<div className="btn-toolbar button-bar">
 				<div className="btn-group button-pos">
-					<button className="btn btn-light" onClick={previousTab}>Back</button>
+					<button className="btn btn-light" onClick={previousTab}>{words[language].back}</button>
 				</div>
 				<div className="btn-group button-pos">
-					<button className="btn btn-info" onClick={nextTab}>Next</button>
+					<button className="btn btn-info" onClick={nextTab}>{words[language].next}</button>
 				</div>
 			</div>
 		</div>	

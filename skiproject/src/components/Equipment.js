@@ -7,8 +7,18 @@ class Equipment extends Component {
 			selected: false,  //this will keep the state of the checkbox. If it's true set checkbox to checked, else not. Call to setState to inverted when addItemToCart is called
 		}
 	}
+
 	render() {
-		const {source,alternate,title,set,sizes,boots,price, addItemToCart} = this.props;
+
+		const words = {
+			english: {
+				select: "Select this Item"
+			},
+			french: {
+				select: "Sélectionnez cet Article"
+			}
+		}
+		const {source,alternate,title,set,sizes,boots,price, addItemToCart,language} = this.props;
 		return (
 			<div className="column equipment">
 				<img src={source} alt={alternate} width="100%" height="300" />
@@ -20,7 +30,7 @@ class Equipment extends Component {
 				<form className="center" action="#">
 					<label>
 						<input onClick={() => addItemToCart(title, price)} type="checkbox" />
-						<span>Select this item</span>
+						<span>{words[language].select}</span>
 					</label>
 				</form>
 			</div>

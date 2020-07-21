@@ -1,8 +1,28 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = ({setLanguage}) => {
+const Navbar = ({setLanguage,language}) => {
 
+	const words = {
+		english: {
+			home: "Home",
+			locations: "Locations",
+			exploreSkis: "Explore Skis",
+			exploreBoards: "Explore Snowboards",
+			contactUs: "Contact Us",
+			language: "Language",
+			order: "Order Online"
+		},
+		french: {
+			home: "Accueil",
+			locations: "Emplacements",
+			exploreSkis: "Explorez Les Skis",
+			exploreBoards: "Explorez Les Planche à Neiges",
+			contactUs: "Nous Joindre",
+			language: "Langue",
+			order: "Commander en Ligne"
+		}
+	}
 	return (
 		<nav className="navbar navbar-inverse">
 			<div className="container-fluid bg-primary p-2 jumbotron">
@@ -10,15 +30,16 @@ const Navbar = ({setLanguage}) => {
 					<a className="nav-brand-color h2 text-light">GearToGo</a>
 				</div>
 				<ul className="nav nav-nav navbar-right">
-					<li className="nav-item"><a className="nav-words" href="/">Home</a></li>
-					<li className="nav-item"><a className="nav-words" href="/locations">Locations</a></li>
-					<li className="nav-item"><a className="nav-words" href="/exploreskis">Explore Skis</a></li>
-					<li className="nav-item"><a className="nav-words" href="/exploresnowboards">Explore Snowboards</a></li>
-					<li className="nav-item"><a className="nav-words" href="/contactus">Contact Us</a></li>
+					<li className="nav-item"><a className="nav-words" href="/">{words[language].home}</a></li>
+					<li className="nav-item"><a className="nav-words" href="/locations">{words[language].locations}</a></li>
+					<li className="nav-item"><a className="nav-words" href="/exploreskis">{words[language].exploreSkis}</a></li>
+					<li className="nav-item"><a className="nav-words" href="/exploresnowboards">{words[language].exploreBoards}</a></li>
+					<li className="nav-item"><a className="nav-words" href="/contactus">{words[language].contactUs}</a></li>
 				</ul>
 			    <div className="dropdown">
+			    	<img src="/icons8-globe-50.png" alt="Globe" style={{width:'20px;'}} />
 					<button className="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Language
+					    {words[language].language}
 					</button>
 					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					    <a onClick={() => setLanguage('english') }className="dropdown-item" href="#">English</a>
@@ -27,7 +48,7 @@ const Navbar = ({setLanguage}) => {
 				</div>
 				<ul className="nav navbar-nav navbar-right">
 					<Link to="/orderonline">
-						<button className="btn btn-info navbar-btn">Order Online</button>
+						<button className="btn btn-info navbar-btn">{words[language].order}</button>
 					</Link>
 				</ul>
 			</div>
