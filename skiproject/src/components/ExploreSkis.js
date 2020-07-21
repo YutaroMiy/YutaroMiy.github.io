@@ -10,13 +10,25 @@ const words = {
     title: "Explore Skis",
     set: "Set",
     skis: "Skis Only",
-    skisBoot: "Skis & Boots",
+    skisBoots: "Skis & Boots",
+    setSkis: "Comes With Skis, Boots, Poles",
+    sizes: "Available Sizes: S,M,L",
+    bootSizes: "Available Boot Sizes: US Men's",
+    englishDollar: "$",
+    decimal: ".",
+    frenchDollar: " ",
   },
   french: {
-    title: "Explorez les skis",
+    title: "Explorez Les Skis",
     set: "L'Ensemble",
     skis: "Seulement Des Skis",
-    skisBoots: "Skis et Chaussures"
+    skisBoots: "Skis et Chaussures",
+    setSkis: "Avec Skis, Bottes, Bâtons",
+    sizes: "Tailles Disponibles: P,M,G",
+    bootSizes: "Tailles De Bottes Disponibles: US Hommes",
+    englishDollar: " ",
+    decimal: ",",
+    frenchDollar: "$",
   }
 }
 const ExploreSkis = ({showCheckboxes, language}) => {
@@ -27,78 +39,78 @@ const ExploreSkis = ({showCheckboxes, language}) => {
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
             <h5 className="center">Rossignol 2020 AE {words[language].set}</h5>
-  					<p className="center">Comes With Skis, Boots, Poles</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
-  					<p className="center">$399.99</p>
+  					<p className="center">{words[language].setSkis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 6 - 14</p>
+  					<p className="center">{words[language].englishDollar}399{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
   					<h5 className="center">Rossignol 2020 AE ({words[language].skis})</h5>
-  					<p className="center">Skis Only</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">$329.99</p>
+  					<p className="center">{words[language].skis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].englishDollar}329{words[language].decimal}99{words[language].frenchDollar}</p>
   					
   				</div>
   				<div className="column locations">
   					<img src="/rossignolae.JPG" alt ="Rossignol AE" width="100%" height="300" />
   					<h5 className="center">Rossignol 2020 AE ({words[language].skisBoots})</h5>
-  					<p className="center">Skis & Boots Set.</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
-  					<p className="center">$359.99</p>
+  					<p className="center">{words[language].skisBoots} {words[language].set}.</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 6 - 14</p>
+  					<p className="center">{words[language].englishDollar}359{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
 			</div>
 			<div className="row">
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
   					<h5 className="center">K2 Mindbender {words[language].set}</h5>
-  					<p className="center">Comes With Skis, Boots, Poles</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 7 - 12</p>
-  					<p className="center">$459.99</p>
+  					<p className="center">{words[language].setSkis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 7 - 12</p>
+  					<p className="center">{words[language].englishDollar}459{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
   					<h5 className="center">K2 Mindbender ({words[language].skis})</h5>
-  					<p className="center">Skis Only</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">$379.99</p>
+  					<p className="center">{words[language].skis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].englishDollar}379{words[language].decimal}99{words[language].frenchDollar}</p>
   					
   				</div>
   				<div className="column locations">
   					<img src="/k2mindbender.JPG" alt ="K2 Mindbender" width="100%" height="300" />
   					<h5 className="center">K2 Mindbender ({words[language].skisBoots})</h5>
-  					<p className="center">Skis & Boots Set.</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 7 - 12</p>
-  					<p className="center">$429.99</p>
+  					<p className="center">{words[language].skisBoots} {words[language].set}.</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 7 - 12</p>
+  					<p className="center">{words[language].englishDollar}429{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
 			</div>
 			<div className="row">
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
   					<h5 className="center">Atomic Vantage {words[language].set}</h5>
-  					<p className="center">Comes With Skis, Boots, Poles</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 2 - 9</p>
-  					<p className="center">$349.99</p>
+  					<p className="center">{words[language].setSkis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 2 - 9</p>
+  					<p className="center">{words[language].englishDollar}349{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
   					<h5 className="center">Atomic Vantage ({words[language].skis})</h5>
-  					<p className="center">Skis Only</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">$269.99</p>
+  					<p className="center">{words[language].skis}</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].englishDollar}269{words[language].decimal}99{words[language].frenchDollar}</p>
   					
   				</div>
   				<div className="column locations">
   					<img src="/atomicvantage.JPG" alt ="Atomic Vantage" width="100%" height="300" />
   					<h5 className="center">Atomic Vantage ({words[language].skisBoots})</h5>
-  					<p className="center">Skis & Boots Set.</p>
-  					<p className="center">Available Sizes: S,M,L</p>
-  					<p className="center">Available Boot Sizes: US Men's 6 - 14</p>
-  					<p className="center">$309.99</p>
+  					<p className="center">{words[language].skisBoots} {words[language].set}.</p>
+  					<p className="center">{words[language].sizes}</p>
+  					<p className="center">{words[language].bootSizes} 6 - 14</p>
+  					<p className="center">{words[language].englishDollar}309{words[language].decimal}99{words[language].frenchDollar}</p>
   				</div>
 			</div>
 		</div>

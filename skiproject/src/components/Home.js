@@ -15,9 +15,9 @@ const words = {
 	french: {
 		welcome: "Bienvenue a GearToGo!",
 		ottawa: "Magasin de ski / snowboard n ° 1 à Ottawa depuis 2003!",
-		best: "Nous sommes élus meilleur magasin de ski / snowboard d'Ottawa pendant 17 années consécutives! Que vous recherchiez des skis, des snowboards, des bottes ou un ensemble complet, nous vous les proposons tous à certains des meilleurs prix de la ville!",
+		best: "Nous sommes élus meilleur magasin de ski / planche à neige d'Ottawa pendant 17 années consécutives! Que vous recherchiez des skis, des planche à neiges, des bottes ou un ensemble complet, nous vous les proposons tous à certains des meilleurs prix de la ville!",
 		skis: "Découvrez Nos Skis",
-		boards: "Découvrez Nos Snowboards"
+		boards: "Découvrez Nos Planche à Neiges"
 	}
 }
 

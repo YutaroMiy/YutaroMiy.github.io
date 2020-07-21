@@ -22,7 +22,7 @@ const Navbar = ({setLanguage}) => {
 					</button>
 					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					    <a onClick={() => setLanguage('english') }className="dropdown-item" href="#">English</a>
-					    <a onClick={() => setLanguage('french') } className="dropdown-item" href="#">French</a>
+					    <a onClick={() => setLanguage('french') } className="dropdown-item" href="#">Français</a>
 					</div>
 				</div>
 				<ul className="nav navbar-nav navbar-right">
