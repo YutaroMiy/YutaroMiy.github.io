@@ -1,3 +1,11 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component allows user to enter their shipping information.
+
+	Form inspired from: https://getbootstrap.com/docs/4.0/components/forms/?#disabled-forms
+*/
 import React from 'react'
 
 const EnterAddress = ({previousTab,nextTab,language}) => {

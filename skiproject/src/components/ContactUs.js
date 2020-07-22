@@ -1,3 +1,12 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component displays the primary contact info for this site and allows a user to send an email directly. 
+
+	Form inspired from: https://getbootstrap.com/docs/4.0/components/forms/?#disabled-forms
+*/
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 

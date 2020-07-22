@@ -1,3 +1,10 @@
+/*
+	Name: Yutaro Miyata;
+	Student Number: 8912340;
+
+	This file contains all the styling for the website GeartoGo.
+*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -91,17 +98,9 @@ code {
 	display: flex;
 }	
 
-.column-online-arrows {
-	width: 10px;
-}
-
 .breadcrumbs-titles {
 	flex-grow: 1;
 	text-align: center;
-}
-
-.breadcrumbs-titles:hover {
-	cursor: pointer;
 }
 
 .container-display {
@@ -119,22 +118,12 @@ code {
 	height: 100%;
 }
 
-.btn-white {
-	background-color: #b3b3b3;   
-}
-
 .button-bar {
 	float: right;
 }
 
 .button-pos {
 	padding: 15px;
-}
-
-.calculate-size {
-	display: flex;
-	padding-top: 25px;
-	padding-bottom: 25px; 
 }
 
 .text-entry-words {
@@ -144,23 +133,6 @@ code {
 .text-entry-box {
 	float: left;
 	width: 75%;
-}
-
-.province-postcode {
-	padding-top: 30px;
-	padding-right: 30px;
-	float: left;
-	width: 50%;
-}
-
-.text-entry-creditcard {
-	float: left;
-	width: 40%;
-}
-
-.text-entry-expiry-cvv {
-	float: left;
-	width: 10%;
 }
 
 .error-message {

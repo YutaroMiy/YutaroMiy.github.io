@@ -1,3 +1,11 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component determines a user's size given their height and weight. 
+
+	Form inspired from: https://getbootstrap.com/docs/4.0/components/forms/?#disabled-forms
+*/
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 

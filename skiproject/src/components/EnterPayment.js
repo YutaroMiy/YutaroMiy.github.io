@@ -1,3 +1,14 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component allows user to enter their payment information.
+
+	Form inspired from: https://getbootstrap.com/docs/4.0/components/forms/?#disabled-forms
+
+	CVV icon taken from: https://icons8.com/icons/set/cvv
+*/
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 

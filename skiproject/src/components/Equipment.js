@@ -1,3 +1,10 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component is an individual equipment. It holds the layout for each listing of each equipment which is shown in /ChooseEquipment. 
+*/
+
 import React, { Component } from 'react'
 
 class Equipment extends Component {

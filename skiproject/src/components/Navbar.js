@@ -1,3 +1,12 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component is the navbar which is located at the top of the site. 
+
+	Globe taken from: https://icons8.com/icons/set/globe 
+*/
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 

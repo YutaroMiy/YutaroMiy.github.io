@@ -1,3 +1,9 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component displays all the locations of the stores of GeartoGo.
+*/
 import React from 'react'
 
 const words = {

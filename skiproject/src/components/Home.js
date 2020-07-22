@@ -1,4 +1,9 @@
 /*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This is the home page of the website
+	
 	Ski photo taken from: https://unsplash.com/s/photos/ski
 */
 import React from 'react'

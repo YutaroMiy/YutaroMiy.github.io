@@ -1,3 +1,12 @@
+/*
+  Name: Yutaro Miyata
+  Student Number: 8912340
+
+  This is the main file which runs the website. This file enables routing to different components as well as language setting using react router. 
+
+  Passing props to components inspired by: https://ui.dev/react-router-v4-pass-props-to-components/
+  Multi language functionaity inspired by: https://www.techmoro.com/how-to-create-a-simple-multi-language-website-with-react/amp/
+*/
 import React, { Component, useState } from 'react';
 import Navbar from './components/Navbar'
 import { BrowserRouter, Route } from 'react-router-dom'

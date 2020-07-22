@@ -1,3 +1,9 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component creates the breadcrumbs pattern which follows the process a user must go through in order to order online.
+*/
 import React, {useState} from 'react'
 import FindSize from './FindSize'
 import ChooseEquipment from './ChooseEquipment'

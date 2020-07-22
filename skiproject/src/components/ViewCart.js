@@ -1,3 +1,13 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component is the shopping cart of the user. It displays the products that the user has selected. 
+
+	Cart table inspired from: https://getbootstrap.com/docs/4.0/content/tables/
+
+	Trash icon taken from: https://icons8.com/icons/set/trash
+*/
 import React from 'react'
 
 const ViewCart = ({previousTab, nextTab, chosenItems, removeItem, language}) => {

@@ -1,4 +1,9 @@
 /*
+  Name: Yutaro Miyata
+  Student Number: 8912340
+
+  This component displays all the snowboards which are sold by GeartoGo. 
+
 	Burton Ripcord taken from: https://www.sportchek.ca/categories/shop-by-sport/snowboarding/snowboards/all-mountain-snowboards/product/burton-ripcord-mens-snowboard-2016-17-332116871.html#332116871%5Bcolor%5D=332116871_99
 	Firefly Furious taken from: https://www.sportchek.ca/categories/shop-by-sport/snowboarding/snowboards/mens-snowboards/product/firefly-furious-wide-mens-snowboard-2016-17-332117677.html#332117677%5Bcolor%5D=332117677_99
 	DC Focus taken from: https://www.sportchek.ca/categories/shop-by-sport/snowboarding/snowboards/product/dc-focus-mens-snowboard-2019-20-332918287.html#332918287%5Bcolor%5D=332918287_99

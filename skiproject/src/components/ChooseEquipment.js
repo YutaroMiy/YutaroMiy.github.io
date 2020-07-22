@@ -1,3 +1,11 @@
+/*
+	Name: Yutaro Miyata
+	Student Number: 8912340
+
+	This component displays all the skis and snowboards a user can add to their cart.
+
+	All images are identical to the ones in /ExploreSkis and /ExploreSnowboards
+*/
 import React from 'react'
 import ExploreSkis from './ExploreSkis'
 import Equipment from './Equipment'
